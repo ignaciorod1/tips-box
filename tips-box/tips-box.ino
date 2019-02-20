@@ -1,22 +1,38 @@
 
 
-int input_pin = 2;
-int val = 0;
+int lowCoinPin = 2;
+int highCoinPin = 3;
 
-void isr(){
-  val = !val;
+bool lowCoinVal = 0;
+bool highCoinVal = 0;
+
+void lowCoinIsr(){
+  lowCoinVal = !lowCoinVal;
+}
+
+void highCoinIsr(){
+  highCoinVal = !highCoinVal;
 }
 
 void setup() {
   Serial.begin(9600);
-  attachInterrupt(digitalPinToInterrupt(input_pin), isr, CHANGE);
-  
+  attachInterrupt(digitalPinToInterrupt(lowCoinPin), lowCoinIsr, CHANGE);
+  attachInterrupt(digitalPinToInterrupt(highCoinPin), highCoinIsr, CHANGE);
 }
 
 void loop() {
-  if(val)  
+
+  Serial.print("Calderilla: ");
+  if(lowCoinVal)
+    Serial.print("1");
+  else if(!lowCoinVal)
+    Serial.print("0");
+    
+  Serial.print(" Real Money: ");
+  if(highCoinVal)
     Serial.println("1");
-  else
-    Serial.println("0");
+  else if(!highCoinVal)
+    Serial.println("0 ");
+  
 
 }
