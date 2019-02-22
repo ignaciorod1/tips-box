@@ -116,7 +116,7 @@ void animation2(){
   digitalWrite(7, 0);
   digitalWrite(6, 0);
   digitalWrite(5, 0);
-  delay(150);
+  delay(100);
 
   ////////////////////  2
 
@@ -127,7 +127,7 @@ void animation2(){
   digitalWrite(7, 0);
   digitalWrite(6, 0);
   digitalWrite(5, 0);
-  delay(150);
+  delay(100);
 
   ////////////////////  3
   digitalWrite(11, 0);
@@ -137,7 +137,7 @@ void animation2(){
   digitalWrite(7, 0);
   digitalWrite(6, 0);
   digitalWrite(5, 0);
-  delay(150);
+  delay(100);
 
   ////////////////////    4
   digitalWrite(11, 0);
@@ -147,7 +147,7 @@ void animation2(){
   digitalWrite(7, 0);
   digitalWrite(6, 0);
   digitalWrite(5, 0);
-  delay(150);
+  delay(100);
 
   ////////////////////  5
   digitalWrite(11, 0);
@@ -157,7 +157,7 @@ void animation2(){
   digitalWrite(7, 1);
   digitalWrite(6, 0);
   digitalWrite(5, 0);
-  delay(150);
+  delay(100);
 
   ////////////////////    6
   digitalWrite(11, 0);
@@ -167,7 +167,7 @@ void animation2(){
   digitalWrite(7, 0);
   digitalWrite(6, 1);
   digitalWrite(5, 0);
-  delay(150);
+  delay(100);
 
   ////////////////////  7
 
@@ -178,7 +178,7 @@ void animation2(){
   digitalWrite(7, 0);
   digitalWrite(6, 0);
   digitalWrite(5, 1);
-  delay(150);
+  delay(100);
   
 }
 
@@ -233,11 +233,12 @@ void loop(){
         tim2=millis();
         if(highCoinVal)
         {
+           animation2();
+           starWars.play();
            lowCoinVal=0;
            highCoinVal=0;
            flag1=1;
-           animation2();
-           starWars.play();
+
         }
      }
      if(flag1==0)

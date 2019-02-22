@@ -51,7 +51,7 @@ void song::play(){
 
  		   	if (mode)
  		   	{
-          if(349 <= melody[i] && melody[i] >= (349 + 83)) // 1
+          if(melody[i] == 349) // 1
  		   													{  digitalWrite(11, 1);
  		   													   digitalWrite(10, 0);
  		   													   digitalWrite(9, 0);
@@ -59,7 +59,7 @@ void song::play(){
                                    digitalWrite(7, 0);
                                    digitalWrite(6, 0);
                                    digitalWrite(5, 0);}
-          else if((349 + 83)<= melody[i] && melody[i] >= (349 + 83*2))  // 2
+          else if(melody[i] == 466)  // 2
                                  {  digitalWrite(11, 1);
                                    digitalWrite(10, 1);
                                    digitalWrite(9, 0);
@@ -67,7 +67,7 @@ void song::play(){
                                    digitalWrite(7, 0);
                                    digitalWrite(6, 0);
                                    digitalWrite(5, 0);}
-          else if((349 + 83*2)<= melody[i] && melody[i] >= (349 + 83*3))  //3
+          else if(melody[i] == 523)  //3
                                  {  digitalWrite(11, 1);
                                    digitalWrite(10, 1);
                                    digitalWrite(9, 1);
@@ -75,7 +75,7 @@ void song::play(){
                                    digitalWrite(7, 0);
                                    digitalWrite(6, 0);
                                    digitalWrite(5, 0);}
-          else if((349 + 83*3)<= melody[i] && melody[i] >= (349 + 83*4))
+          else if(melody[i] == 587)
                                  {  digitalWrite(11, 1);
                                    digitalWrite(10, 1);
                                    digitalWrite(9, 1);
@@ -83,7 +83,7 @@ void song::play(){
                                    digitalWrite(7, 0);
                                    digitalWrite(6, 0);
                                    digitalWrite(5, 0);}
-          else if((349 + 83*4)<= melody[i] && melody[i] >= (349 + 83*5))
+          else if(melody[i] == 622)
                                  {  digitalWrite(11, 1);
                                    digitalWrite(10, 1);
                                    digitalWrite(9, 1);
@@ -91,7 +91,7 @@ void song::play(){
                                    digitalWrite(7, 1);
                                    digitalWrite(6, 0);
                                    digitalWrite(5, 0);}
-          else if((349 + 83*5)<= melody[i] && melody[i] >= (349 + 83*6))
+          else if(melody[i] == 698)
                                  {  digitalWrite(11, 1);
                                    digitalWrite(10, 1);
                                    digitalWrite(9, 1);
@@ -99,7 +99,7 @@ void song::play(){
                                    digitalWrite(7, 1);
                                    digitalWrite(6, 1);
                                    digitalWrite(5, 0);}
-          else if((349 + 83*6)<= melody[i] && melody[i] >= (349 + 83*7))
+          else if(melody[i] == 932)
                                  {  digitalWrite(11, 1);
                                    digitalWrite(10, 1);
                                    digitalWrite(9, 1);
